@@ -1,5 +1,5 @@
 import React, {useState, useRef} from 'react';
-import {Button, Input} from './components/RepoStyled';
+import styled from 'styled-components/native/dist/index-standalone';
 
 export default function ControlledInputForm(props) {
 
@@ -14,16 +14,17 @@ export default function ControlledInputForm(props) {
     e.preventDefault();
     props.valueSubmitted(InputRef.current.value);
   }
+
   return(
     <form onSubmit={handleSubmit} >
-        <Input
+        <input
           type="text"
           name={props.repo}
           value={value}
           onChange={handleChange}
           ref={InputRef}
         />
-        <Button type="submit" >Get Repos</Button>
+        <button type="submit" >Get Repos</button>
     </form>
   )
 }

@@ -1,6 +1,5 @@
 import React,{ useEffect, useState } from 'react';
 import styled from 'styled-components';
-import {Input} from './components/ReposStyled'
 
 export default function Repos(props){
 
