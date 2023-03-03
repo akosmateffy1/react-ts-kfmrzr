@@ -1,5 +1,4 @@
 import React, {useState, useRef} from 'react';
-import styled from 'styled-components/native/dist/index-standalone';
 
 export default function ControlledInputForm(props) {
 
