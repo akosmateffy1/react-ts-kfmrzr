@@ -7,11 +7,16 @@ import ControlledInputForm from "./components/ControlledInputForm"
 export default function App() {
 
   const [repo, setRepo] = useState('facebook');
+  const [count, setCount] = useState(0);
 
   const changeRepo = (repoName) => {
     repoName = repoName.trim();
     setRepo(repoName);
   };
+
+  handleClick = () => {
+    setCount(count + 1)
+  }
 
   return (
     <div>
@@ -23,6 +28,16 @@ export default function App() {
       <Repos 
         userName={repo}
       />
+      <div>
+          <button style={{
+                  padding:"10px",
+                  width:"10px",
+                }}
+            onClick={handleClick}
+           >
+            gomb {count}
+          </button>
+      </div>
     </div>
   );
 }
