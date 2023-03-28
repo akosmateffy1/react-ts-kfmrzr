@@ -14,7 +14,7 @@ export default function App() {
     setRepo(repoName);
   };
 
-  handleClick = () => {
+  const handleClick = () => {
     setCount(count + 1)
   }
 
